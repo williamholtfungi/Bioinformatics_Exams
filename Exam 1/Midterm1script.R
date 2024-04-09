@@ -1,27 +1,27 @@
 
 #Loading Packages
-if (!require("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("Biostrings", force = TRUE)
-BiocManager::install("GenomicAlignments", force = TRUE)
+# if (!require("BiocManager", quietly = TRUE))
+#   install.packages("BiocManager")
+# BiocManager::install("Biostrings", force = TRUE)
+# BiocManager::install("GenomicAlignments", force = TRUE)
 library(Biostrings)
 library(msa)
 library(dplyr)
 library(tidyverse)
 library(genepop)
 library(tidyr)
-install.packages("seqinr")
+# install.packages("seqinr")
 library(seqinr)
 library(ape)
-install.packages("UniprotR")
-install.packages("protti")
-install.packages("r3dmol")
+# install.packages("UniprotR")
+# install.packages("protti")
+# install.packages("r3dmol")
 library(UniprotR)
 library(protti)
 library(r3dmol)
 library(snakecase)
-remotes::install_github("Tazinho/snakecase")
-install.packages("protti", dependencies = TRUE)
+# remotes::install_github("Tazinho/snakecase")
+# install.packages("protti", dependencies = TRUE)
 
 
 #Directory Check
@@ -37,8 +37,8 @@ myFirstAlignment
 print(myFirstAlignment, show="complete")
 
 #Importing the "Most Different Sequence"
-Sequence06 <- Biostrings::readDNAStringSet("sequence06.fasta")
-
+# Sequence06 <- Biostrings::readDNAStringSet("sequence06.fasta")
+Sequence06 <- mySequences$Homo_sapiens_6 
 
 #Translating Sequence06 into AA
 aa_sequence <- Biostrings::translate(Sequence06)
